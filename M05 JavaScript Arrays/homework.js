@@ -193,13 +193,26 @@ function tablaDelSeis() {
   // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
   // Tu código:
-  
+  var tabla6 = [];
+
+  for (var i = 0; i <= 60; i = i + 6) {
+    tabla6.push(i);
+  }
+  return tabla6;
 }
 
 function mayorACien(array) {
   // La función recibe un arreglo con enteros entre 0 y 200.
   // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
   // Tu código:
+  var mayores = [];
+
+  for (var i = 0; i <= 200; i++) {
+    if (array[i] > 100) {
+      mayores.push(array[i]);
+    }
+  }
+  return mayores;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -213,6 +226,24 @@ function breakStatement(num) {
   // la ejecución y retornar el string: "Se interrumpió la ejecución".
   // [PISTA]: utiliza el statement 'break'.
   // Tu código:
+  var arrayNuevo = [];
+
+  var numNuevo = num;
+
+  for (var i = 0; i < 10; i++) {
+    numNuevo += 2;
+    if (numNuevo == i) {
+      break;
+    } else {
+      arrayNuevo.push(numNuevo);
+    }
+  }
+
+  if (i < 10) {
+    return "Se interrumpió la ejecución";
+  } else {
+    return arrayNuevo;
+  }
 }
 
 function continueStatement(num) {
@@ -222,6 +253,20 @@ function continueStatement(num) {
   // se continua con la siguiente iteración.
   // [PISTA]: utiliza el statement 'continue'.
   // Tu código:
+
+  var arregloNuevo = [];
+  var suma = num;
+
+  for (var i = 0; i < 10; i++) {
+    
+    if (i == 5) {
+      continue;
+    } else {
+      suma +=2;
+      arregloNuevo.push(suma);
+    }
+  }
+  return (arregloNuevo);
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
